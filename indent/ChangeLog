@@ -1,10 +1,16 @@
-2001-10-26  Christoph Hellwig  <hch@infradead.org>
+2001-10-28  Christoph Hellwig  <hch@infradead.org>
+
+	* src/Makefile.am (indent_SOURCES): add indent_codes.h, indent_globs.h
+
+2001-10-28  Christoph Hellwig  <hch@infradead.org>
 
 	indent 0.1 released
 
 	* indent.spec: add specfile for RPMv3+
 
 	* autogen.sh: add wrapper for the auto* tools
+
+2001-10-26  Christoph Hellwig  <hch@infradead.org>
 
 	* AUTHORS, COPYING, INSTALL, NEWS, README, ChangeLog: add
 	automake-mandated docs
