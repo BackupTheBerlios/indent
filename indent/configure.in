@@ -17,4 +17,4 @@ dnl Checks for library functions.
 AC_FUNC_MEMCMP
 AC_FUNC_VPRINTF
 
-AC_OUTPUT(Makefile src/Makefile)
+AC_OUTPUT(Makefile src/Makefile indent.spec)

@@ -1,5 +1,14 @@
 2002-07-25  Christoph Hellwig  <hch@infradead.org>
 
+	Autogenerate specfile.
+
+	* indent.spec.in: New file.
+	* indent.spec: Removed.
+	* Makefile.am: Copy generated specfile to during dist target.
+	* configure.in: Generate indent.spec.
+
+2002-07-25  Christoph Hellwig  <hch@infradead.org>
+
 	Update from NetBSD-current of 2002-07-25.
 
 	* src/args.c: ANSIfy.

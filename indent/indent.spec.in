@@ -1,5 +1,5 @@
-Name		: indent
-Version		: 0.2
+Name		: @PACKAGE@
+Version		: @VERSION@
 Release		: 1
 Group		: Programming/Tools
 
@@ -7,10 +7,10 @@ Summary         : Source code indenting program.
 
 Copyright       : BSD with advertisment clause
 Packager        : Christoph Hellwig <hch@infradead.org>
-URL		: ftp://ftp.openlinux.org/pub/people/hch/indent/
+URL		: http://developer.berlios.de/projects/indent/
 
-BuildRoot	: /tmp/%{Name}-%{Version}
-Source		: %{Name}-%{Version}.tar.gz
+BuildRoot	: %{_tmppath}/%{name}-%{version}
+Source		: %{name}-%{version}.tar.gz
 
 %Description
 This is _the_ C indenter.  It reformats C sources by inserting or deleting
@@ -22,7 +22,7 @@ by James Gosling @ CMU.
 %setup
 
 %Build
-CFLAGS="${RPM_OPTFLAGS}" ./configure --prefix=/usr --mandir=/usr/share/man/
+CFLAGS="${RPM_OPT_FLAGS}" ./configure --prefix=/usr --mandir=/usr/share/man/
 make
 
 %Install
