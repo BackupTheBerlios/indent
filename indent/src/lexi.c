@@ -1,5 +1,5 @@
-/*	$Id: lexi.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
-/*	$NetBSD: lexi.c,v 1.9 1999/03/15 20:28:45 kristerw Exp $	*/
+/*	$Id: lexi.c,v 1.3 2002/07/25 15:11:45 hch Exp $	*/
+/*	$NetBSD: lexi.c,v 1.11 2002/05/26 22:53:38 wiz Exp $	*/
 
 /*
  * Copyright (c) 1980, 1993
@@ -38,10 +38,13 @@
  */
 
 #include <sys/cdefs.h>
+#if 0 /* ndef lint */
 #if 0
 static char sccsid[] = "@(#)lexi.c	8.1 (Berkeley) 6/6/93";
-__RCSID("$NetBSD: lexi.c,v 1.9 1999/03/15 20:28:45 kristerw Exp $");
+#else
+__RCSID("$NetBSD: lexi.c,v 1.11 2002/05/26 22:53:38 wiz Exp $");
 #endif
+#endif				/* not lint */
 
 /*
  * Here we have the token scanner for indent.  It scans off one token and puts
@@ -123,7 +126,7 @@ char    chartype[128] =
 
 
 int
-lexi()
+lexi(void)
 {
 	int     unary_delim;	/* this is set to 1 if the current token
 				 * 
@@ -159,7 +162,7 @@ lexi()
 
 		if (isdigit((unsigned char)*buf_ptr) ||
 		    (buf_ptr[0] == '.' && isdigit((unsigned char)buf_ptr[1]))) {
-			int     seendot = 0, seenexp = 0;
+			int     seendot = 0, seenexp = 0, seensfx = 0;
 			if (*buf_ptr == '0' &&
 			    (buf_ptr[1] == 'x' || buf_ptr[1] == 'X')) {
 				*e_token++ = *buf_ptr++;
@@ -198,13 +201,28 @@ lexi()
 				/* float constant */
 				*e_token++ = *buf_ptr++;
 			} else {
-				/* integer constant (U, L, UL, LL, ULL) */
-				if (*buf_ptr == 'U' || *buf_ptr == 'u')
-					*e_token++ = *buf_ptr++;
-				if (*buf_ptr == 'L' || *buf_ptr == 'l')
-					*e_token++ = *buf_ptr++;
-				if (*buf_ptr == 'L' || *buf_ptr == 'l')
-					*e_token++ = *buf_ptr++;
+				/* integer constant */
+				while (1) {
+					if (!(seensfx & 1) &&
+					    (*buf_ptr == 'U' ||
+					     *buf_ptr == 'u')) {
+						CHECK_SIZE_TOKEN;
+						*e_token++ = *buf_ptr++;
+						seensfx |= 1;
+						continue;
+					}
+					if (!(seensfx & 2) &&
+					    (*buf_ptr == 'L' ||
+					     *buf_ptr == 'l')) {
+						CHECK_SIZE_TOKEN;
+						if (buf_ptr[1] == buf_ptr[0])
+							*e_token++ = *buf_ptr++;
+						*e_token++ = *buf_ptr++;
+						seensfx |= 2;
+						continue;
+					}
+					break;
+				}
 			}
 		} else
 			while (chartype[(int) *buf_ptr] == alphanum) {	/* copy it over */
@@ -569,9 +587,7 @@ stop_lit:
  * Add the given keyword to the keyword table, using val as the keyword type
  */
 void
-addkey(key, val)
-	char   *key;
-	int     val;
+addkey(char *key, int val)
 {
 	struct templ *p = specials;
 	while (p->rwd)

@@ -1,5 +1,5 @@
-/*	$Id: pr_comment.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
-/*	$NetBSD: pr_comment.c,v 1.6 1997/10/19 03:17:29 lukem Exp $	*/
+/*	$Id: pr_comment.c,v 1.3 2002/07/25 15:11:45 hch Exp $	*/
+/*	$NetBSD: pr_comment.c,v 1.7 2002/05/26 22:53:38 wiz Exp $	*/
 
 /*
  * Copyright (c) 1980, 1993
@@ -38,10 +38,13 @@
  */
 
 #include <sys/cdefs.h>
+#if 0 /* ndef lint */
 #if 0
 static char sccsid[] = "@(#)pr_comment.c	8.1 (Berkeley) 6/6/93";
-__RCSID("$NetBSD: pr_comment.c,v 1.6 1997/10/19 03:17:29 lukem Exp $");
+#else
+__RCSID("$NetBSD: pr_comment.c,v 1.7 2002/05/26 22:53:38 wiz Exp $");
 #endif
+#endif				/* not lint */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -80,7 +83,7 @@ __RCSID("$NetBSD: pr_comment.c,v 1.6 1997/10/19 03:17:29 lukem Exp $");
 
 
 void
-pr_comment()
+pr_comment(void)
 {
 	int     now_col;	/* column we are in now */
 	int     adj_max_col;	/* Adjusted max_col for when we decide to

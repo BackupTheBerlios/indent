@@ -1,16 +1,26 @@
+2002-07-25  Christoph Hellwig  <hch@infradead.org>
+
+	Update from NetBSD-current of 2002-07-25.
+
+	* src/args.c: ANSIfy.
+	* src/indent.c: Likewise.
+	* src/indent_globs.h: Likewise.
+	* src/io.c: Likewise.
+	* src/lexi.c: Likewise.
+	* src/parse.c: Likewise.
+	* src/pr_comment.c: Likewise.
+
 2001-10-28  Christoph Hellwig  <hch@infradead.org>
 
-	* Makefile.am (EXTRA_DIST): add indent.spec
-
-	* src/Makefile.am (indent_SOURCES): add indent_codes.h, indent_globs.h
+	* Makefile.am (EXTRA_DIST): Add indent.spec.
+	* src/Makefile.am (indent_SOURCES): Add indent_codes.h, indent_globs.h.
 
 2001-10-28  Christoph Hellwig  <hch@infradead.org>
 
 	indent 0.1 released
 
-	* indent.spec: add specfile for RPMv3+
-
-	* autogen.sh: add wrapper for the auto* tools
+	* indent.spec: Add specfile for RPMv3+,
+	* autogen.sh: Add wrapper for the auto* tools.
 
 2001-10-26  Christoph Hellwig  <hch@infradead.org>
 
@@ -21,7 +31,7 @@
 	  src/Makefile.am, configure.in: autoconf/automake support
 
 	* src/args.c, src/indent.c, src/io.c, src/lexi.c, src/parse.c,
-	  src/pr_comment.c: enclose __COPYRIGHT and __RCSID with #if 0
+	  src/pr_comment.c: Enclose __COPYRIGHT and __RCSID with #if 0
 
 	* src/args.c, src/indent.c, src/indent.1, src/io.c, src/lexi.c,
-	  src/parse.c, src/pr_comment.c: initial import of the NetBSD sources
+	  src/parse.c, src/pr_comment.c: Initial import of the NetBSD sources

@@ -1,5 +1,5 @@
-/*	$Id: parse.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
-/*	$NetBSD: parse.c,v 1.5 1997/10/19 03:17:27 lukem Exp $	*/
+/*	$Id: parse.c,v 1.3 2002/07/25 15:11:45 hch Exp $	*/
+/*	$NetBSD: parse.c,v 1.6 2002/05/26 22:53:38 wiz Exp $	*/
 
 /*
  * Copyright (c) 1980, 1993
@@ -38,18 +38,21 @@
  */
 
 #include <sys/cdefs.h>
+#if 0 /* ndef lint */
 #if 0
 static char sccsid[] = "@(#)parse.c	8.1 (Berkeley) 6/6/93";
-__RCSID("$NetBSD: parse.c,v 1.5 1997/10/19 03:17:27 lukem Exp $");
+#else
+__RCSID("$NetBSD: parse.c,v 1.6 2002/05/26 22:53:38 wiz Exp $");
 #endif
+#endif				/* not lint */
 
 #include <stdio.h>
 #include "indent_globs.h"
 #include "indent_codes.h"
 
+/* tk: the code for the construct scanned */
 void
-parse(tk)
-	int     tk;		/* the code for the construct scanned */
+parse(int tk)
 {
 	int     i;
 
@@ -250,7 +253,7 @@ parse(tk)
 |   REDUCTION PHASE				    |
 \*----------------------------------------------*/
 void
-reduce()
+reduce(void)
 {
 
 	int     i;

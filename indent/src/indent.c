@@ -1,5 +1,5 @@
-/*	$Id: indent.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
-/*	$NetBSD: indent.c,v 1.12 2001/08/20 12:00:55 wiz Exp $	*/
+/*	$Id: indent.c,v 1.3 2002/07/25 15:11:45 hch Exp $	*/
+/*	$NetBSD: indent.c,v 1.13 2002/05/26 22:53:38 wiz Exp $	*/
 
 /*
  * Copyright (c) 1980, 1993
@@ -38,15 +38,20 @@
  */
 
 #include <sys/cdefs.h>
-
-#if 0
+#if 0 /* ndef lint */
 __COPYRIGHT("@(#) Copyright (c) 1985 Sun Microsystems, Inc.\n\
 @(#) Copyright (c) 1976 Board of Trustees of the University of Illinois.\n\
 @(#) Copyright (c) 1980, 1993\n\
 	The Regents of the University of California.  All rights reserved.\n");
+#endif				/* not lint */
+
+#if 0 /* ndef lint */
+#if 0
 static char sccsid[] = "@(#)indent.c	5.17 (Berkeley) 6/7/93";
-__RCSID("$NetBSD: indent.c,v 1.12 2001/08/20 12:00:55 wiz Exp $");
+#else
+__RCSID("$NetBSD: indent.c,v 1.13 2002/05/26 22:53:38 wiz Exp $");
 #endif
+#endif				/* not lint */
 
 #include <sys/param.h>
 #include <ctype.h>
@@ -68,12 +73,10 @@ char   *out_name = "Standard Output";	/* will always point to name of output
 					 * file */
 char    bakfile[MAXPATHLEN] = "";
 
-int main __P((int, char **));
+int main(int, char **);
 
 int
-main(argc, argv)
-	int     argc;
-	char  **argv;
+main(int argc, char **argv)
 {
 
 	extern int found_err;	/* flag set in diag() on error */
@@ -1209,7 +1212,7 @@ check_type:
  * original input file the output
  */
 void
-bakcopy()
+bakcopy(void)
 {
 	int     n, bakchn;
 	char    buff[8 * 1024];

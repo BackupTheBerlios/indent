@@ -1,5 +1,5 @@
-/*	$Id: args.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
-/*	$NetBSD: args.c,v 1.6 1998/12/19 17:00:08 christos Exp $	*/
+/*	$Id: args.c,v 1.3 2002/07/25 15:11:45 hch Exp $	*/
+/*	$NetBSD: args.c,v 1.7 2002/05/26 22:53:38 wiz Exp $	*/
 
 /*
  * Copyright (c) 1980, 1993
@@ -38,11 +38,13 @@
  */
 
 #include <sys/cdefs.h>
-
+#if 0 /* ndef lint */
 #if 0
 static char sccsid[] = "@(#)args.c	8.1 (Berkeley) 6/6/93";
-__RCSID("$NetBSD: args.c,v 1.6 1998/12/19 17:00:08 christos Exp $");
+#else
+__RCSID("$NetBSD: args.c,v 1.7 2002/05/26 22:53:38 wiz Exp $");
 #endif
+#endif				/* not lint */
 
 /*
  * Argument scanning and profile reading code.  Default parameters are set
@@ -285,7 +287,7 @@ struct pro {
  * given in these files.
  */
 void
-set_profile()
+set_profile(void)
 {
 	FILE   *f;
 	char    fname[BUFSIZ];
@@ -304,8 +306,7 @@ set_profile()
 }
 
 void
-scan_profile(f)
-	FILE   *f;
+scan_profile(FILE *f)
 {
 	int     i;
 	char   *p;
@@ -327,9 +328,7 @@ scan_profile(f)
 char   *param_start;
 
 int
-eqin(s1, s2)
-	char   *s1;
-	char   *s2;
+eqin(char *s1, char *s2)
 {
 	while (*s1) {
 		if (*s1++ != *s2++)
@@ -342,7 +341,7 @@ eqin(s1, s2)
  * Set the defaults.
  */
 void
-set_defaults()
+set_defaults(void)
 {
 	struct pro *p;
 
@@ -357,8 +356,7 @@ set_defaults()
 }
 
 void
-set_option(arg)
-	char   *arg;
+set_option(char *arg)
 {
 	struct pro *p;
 
