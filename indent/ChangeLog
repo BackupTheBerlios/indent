@@ -1,3 +1,8 @@
+2002-07-26  Christoph Hellwig  <hch@infradead.org>
+
+	* src/args.c (set_profile): Use snprintf instead of sprintf.
+	* src/indent.c (main): Likewise
+
 2002-07-25  Christoph Hellwig  <hch@infradead.org>
 
 	Autogenerate specfile.

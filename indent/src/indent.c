@@ -1,4 +1,4 @@
-/*	$Id: indent.c,v 1.3 2002/07/25 15:11:45 hch Exp $	*/
+/*	$Id: indent.c,v 1.4 2002/07/26 09:46:34 hch Exp $	*/
 /*	$NetBSD: indent.c,v 1.13 2002/05/26 22:53:38 wiz Exp $	*/
 
 /*
@@ -1224,7 +1224,7 @@ bakcopy(void)
 		p--;
 	if (*p == '/')
 		p++;
-	sprintf(bakfile, "%s.BAK", p);
+	snprintf(bakfile, MAXPATHLEN-1, "%s.BAK", p);
 
 	/* copy in_name to backup file */
 	bakchn = creat(bakfile, 0600);

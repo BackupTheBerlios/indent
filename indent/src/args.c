@@ -1,4 +1,4 @@
-/*	$Id: args.c,v 1.3 2002/07/25 15:11:45 hch Exp $	*/
+/*	$Id: args.c,v 1.4 2002/07/26 09:46:34 hch Exp $	*/
 /*	$NetBSD: args.c,v 1.7 2002/05/26 22:53:38 wiz Exp $	*/
 
 /*
@@ -293,7 +293,7 @@ set_profile(void)
 	char    fname[BUFSIZ];
 	static char prof[] = ".indent.pro";
 
-	sprintf(fname, "%s/%s", getenv("HOME"), prof);
+	snprintf(fname, BUFSIZ-1, "%s/%s", getenv("HOME"), prof);
 	if ((f = fopen(option_source = fname, "r")) != NULL) {
 		scan_profile(f);
 		(void) fclose(f);
