@@ -22,7 +22,7 @@ by James Gosling @ CMU.
 %setup
 
 %Build
-CFLAGS="${RPM_OPTFLAGS}" ./configure --prefix=/usr --mandir=/usr/share/man/en
+CFLAGS="${RPM_OPTFLAGS}" ./configure --prefix=/usr --mandir=/usr/share/man/
 make
 
 %Install
@@ -30,5 +30,5 @@ make install DESTDIR=${RPM_BUILD_ROOT}
 
 %Files
 /usr/bin/indent
-/usr/share/man/man1/en/indent.1*
+/usr/share/man/man1/indent.1*
 %doc AUTHORS COPYING INSTALL NEWS README ChangeLog
