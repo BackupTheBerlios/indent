@@ -1,4 +1,4 @@
-/*	$Id: lexi.c,v 1.1 2001/10/28 16:34:19 hch Exp $	*/
+/*	$Id: lexi.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
 /*	$NetBSD: lexi.c,v 1.9 1999/03/15 20:28:45 kristerw Exp $	*/
 
 /*
@@ -38,13 +38,10 @@
  */
 
 #include <sys/cdefs.h>
-#ifndef lint
 #if 0
 static char sccsid[] = "@(#)lexi.c	8.1 (Berkeley) 6/6/93";
-#else
 __RCSID("$NetBSD: lexi.c,v 1.9 1999/03/15 20:28:45 kristerw Exp $");
 #endif
-#endif				/* not lint */
 
 /*
  * Here we have the token scanner for indent.  It scans off one token and puts

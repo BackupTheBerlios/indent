@@ -1,4 +1,4 @@
-/*	$Id: args.c,v 1.1 2001/10/28 16:34:19 hch Exp $	*/
+/*	$Id: args.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
 /*	$NetBSD: args.c,v 1.6 1998/12/19 17:00:08 christos Exp $	*/
 
 /*
@@ -38,13 +38,11 @@
  */
 
 #include <sys/cdefs.h>
-#ifndef lint
+
 #if 0
 static char sccsid[] = "@(#)args.c	8.1 (Berkeley) 6/6/93";
-#else
 __RCSID("$NetBSD: args.c,v 1.6 1998/12/19 17:00:08 christos Exp $");
 #endif
-#endif				/* not lint */
 
 /*
  * Argument scanning and profile reading code.  Default parameters are set

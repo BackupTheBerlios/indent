@@ -1,4 +1,4 @@
-/*	$Id: io.c,v 1.1 2001/10/28 16:34:19 hch Exp $	*/
+/*	$Id: io.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
 /*	$NetBSD: io.c,v 1.10 2000/10/14 18:07:10 is Exp $	*/
 
 /*
@@ -38,13 +38,11 @@
  */
 
 #include <sys/cdefs.h>
-#ifndef lint
+
 #if 0
 static char sccsid[] = "@(#)io.c	8.1 (Berkeley) 6/6/93";
-#else
 __RCSID("$NetBSD: io.c,v 1.10 2000/10/14 18:07:10 is Exp $");
 #endif
-#endif				/* not lint */
 
 #include <ctype.h>
 #include <err.h>

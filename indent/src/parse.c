@@ -1,4 +1,4 @@
-/*	$Id: parse.c,v 1.1 2001/10/28 16:34:19 hch Exp $	*/
+/*	$Id: parse.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
 /*	$NetBSD: parse.c,v 1.5 1997/10/19 03:17:27 lukem Exp $	*/
 
 /*
@@ -38,13 +38,10 @@
  */
 
 #include <sys/cdefs.h>
-#ifndef lint
 #if 0
 static char sccsid[] = "@(#)parse.c	8.1 (Berkeley) 6/6/93";
-#else
 __RCSID("$NetBSD: parse.c,v 1.5 1997/10/19 03:17:27 lukem Exp $");
 #endif
-#endif				/* not lint */
 
 #include <stdio.h>
 #include "indent_globs.h"

@@ -1,4 +1,4 @@
-/*	$Id: pr_comment.c,v 1.1 2001/10/28 16:34:19 hch Exp $	*/
+/*	$Id: pr_comment.c,v 1.2 2001/10/28 16:39:27 hch Exp $	*/
 /*	$NetBSD: pr_comment.c,v 1.6 1997/10/19 03:17:29 lukem Exp $	*/
 
 /*
@@ -38,13 +38,10 @@
  */
 
 #include <sys/cdefs.h>
-#ifndef lint
 #if 0
 static char sccsid[] = "@(#)pr_comment.c	8.1 (Berkeley) 6/6/93";
-#else
 __RCSID("$NetBSD: pr_comment.c,v 1.6 1997/10/19 03:17:29 lukem Exp $");
 #endif
-#endif				/* not lint */
 
 #include <stdio.h>
 #include <stdlib.h>
