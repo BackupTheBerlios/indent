@@ -1,0 +1,14 @@
+2001-10-26  Christoph Hellwig  <hch@infradead.org>
+
+	* configure.in, install-sh, missing, mkinstalldirs, Makefile.am,
+	  src/Makefile.am, configure.in: autocong/automake support
+
+2001-10-26  Christoph Hellwig  <hch@infradead.org>
+
+	* src/args.c, src/indent.c, src/io.c, src/lexi.c, src/parse.c,
+	  src/pr_comment.c: enclose __COPYRIGHT and __RCSID with #if 0
+
+2001-10-26  Christoph Hellwig  <hch@infradead.org>
+
+	* src/args.c, src/indent.c, src/indent.1, src/io.c, src/lexi.c,
+	  src/parse.c, src/pr_comment.c: initial import of the NetBSD sources
