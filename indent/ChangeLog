@@ -1,5 +1,7 @@
 2001-10-26  Christoph Hellwig  <hch@infradead.org>
 
+	* indent.spec: add specfile for RPMv3+
+
 	* autogen.sh: add wrapper for the auto* tools
 
 	* AUTHORS, COPYING, INSTALL, NEWS, README, ChangeLog: add
