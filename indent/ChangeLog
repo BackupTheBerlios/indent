@@ -1,5 +1,7 @@
 2001-10-28  Christoph Hellwig  <hch@infradead.org>
 
+	* Makefile.am (EXTRA_DIST): add indent.spec
+
 	* src/Makefile.am (indent_SOURCES): add indent_codes.h, indent_globs.h
 
 2001-10-28  Christoph Hellwig  <hch@infradead.org>
