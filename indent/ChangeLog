@@ -8,7 +8,7 @@
 	automake-mandated docs
 
 	* configure.in, install-sh, missing, mkinstalldirs, Makefile.am,
-	  src/Makefile.am, configure.in: autocong/automake support
+	  src/Makefile.am, configure.in: autoconf/automake support
 
 	* src/args.c, src/indent.c, src/io.c, src/lexi.c, src/parse.c,
 	  src/pr_comment.c: enclose __COPYRIGHT and __RCSID with #if 0
