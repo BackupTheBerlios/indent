@@ -1,5 +1,11 @@
 2002-07-26  Christoph Hellwig  <hch@infradead.org>
 
+	indent 0.2 released
+
+	* NEWS: Update.
+
+2002-07-26  Christoph Hellwig  <hch@infradead.org>
+
 	* src/args.c (set_profile): Use snprintf instead of sprintf.
 	* src/indent.c (main): Likewise
 

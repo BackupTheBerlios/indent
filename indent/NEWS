@@ -1,4 +1,9 @@
 NEWS - list of user-visible changes between releases of indent
 
+New in 0.1 - 2002-07-26
+* pure ANSI C sources
+* use snprinf instead of sprintf on user-controlable arguments
+* the RPM specfile is now autogenerate
+
 New in 0.1 - 2001-10-28
 * 'port' of NetBSD-current indent
