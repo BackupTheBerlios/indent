@@ -1,1 +1,4 @@
 NEWS - list of user-visible changes between releases of indent
+
+New in 0.1 - 2001-10-28
+* 'port' of NetBSD-current indent
